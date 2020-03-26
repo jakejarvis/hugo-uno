@@ -1,0 +1,20 @@
+{
+  "name": "hugo-uno",
+  "version": "0.0.1",
+  "description": "Hugo boilerplate with Node, PostCSS, Autoprefixer, Netlify, etc.",
+  "author": "",
+  "repository": "jakejarvis/hugo-uno",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf public/ resources/ builds/",
+    "start": "hugo server --buildDrafts --buildFuture",
+    "build": "hugo",
+    "build:preview": "hugo --baseURL \"${DEPLOY_PRIME_URL:-/}\" --buildDrafts --buildFuture"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "hugo-extended": "0.68.3",
+    "postcss-cli": "^7.1.0",
+    "rimraf": "^3.0.2"
+  }
+}

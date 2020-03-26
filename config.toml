@@ -1,0 +1,43 @@
+# https://gohugo.io/getting-started/configuration/#toml-configuration
+
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Hugo Uno"
+
+# increase timeout for image processing
+timeout = 120000
+
+# don't worry, inserted manually :)
+disableHugoGeneratorInject = true
+
+# prefer Netlify's _redirects file, see outputs below
+disableAliases = true
+
+# categories and tags disabled for an easy start
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+enableRobotsTXT = true
+
+[sitemap]
+  filename = "sitemap.xml"
+
+[outputs]
+  home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+[mediaTypes]
+  [mediaTypes."text/netlify"]
+    delimiter = ""
+
+[outputFormats]
+  [outputFormats.REDIRECTS]
+    mediaType = "text/netlify"
+    baseName = "_redirects"
+    isPlainText = true
+    notAlternative = true
+  [outputFormats.HEADERS]
+    mediaType = "text/netlify"
+    baseName = "_headers"
+    isPlainText = true
+    notAlternative = true

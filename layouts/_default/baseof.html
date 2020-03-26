@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+  <meta charset="utf-8">
+  {{ hugo.Generator }}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }}</title>
+
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS (dict "targetPath" "style.css") | resources.PostCSS (dict "config" "postcss.config.js") }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+  {{ with .OutputFormats.Get "RSS" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+  {{- end }}
+</head>
+<body>
+  {{ partial "header" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partial "footer" . }}
+</body>
+</html>

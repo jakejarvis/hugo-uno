@@ -1,0 +1,7 @@
+# Sensible default security headers
+#  - More info: https://scotthelme.co.uk/hardening-your-http-response-headers/
+#  - Test website: https://securityheaders.com/
+/*
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: sameorigin
