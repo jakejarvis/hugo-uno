@@ -1,7 +1,7 @@
 {
   "name": "hugo-uno",
   "version": "0.0.1",
-  "description": "Hugo boilerplate with Node, PostCSS, Autoprefixer, Netlify, etc.",
+  "description": "Personal Hugo boilerplate with Node, PostCSS, Autoprefixer, Netlify, etc.",
   "author": "",
   "repository": "jakejarvis/hugo-uno",
   "license": "MIT",
