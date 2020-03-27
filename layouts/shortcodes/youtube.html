@@ -1,0 +1,5 @@
+<!-- WIP -->
+
+{{- $url := printf "https://www.youtube.com/oembed?format=json&url=%s" (.Get "url") -}}
+{{- $json := getJSON $url -}}
+{{- $json.html | safeHTML -}}

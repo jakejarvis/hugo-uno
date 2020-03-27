@@ -1,0 +1,3 @@
+{{- $url := printf "https://api.smugmug.com/services/oembed/?format=json&url=%s" (.Get "url") -}}
+{{- $json := getJSON $url -}}
+{{- $json.html | safeHTML -}}

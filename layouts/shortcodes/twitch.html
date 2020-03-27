@@ -1,0 +1,3 @@
+{{- $url := printf "https://api.twitch.tv/v5/oembed?url=%s" (.Get "url") -}}
+{{- $json := getJSON $url -}}
+{{- $json.html | safeHTML -}}

@@ -1,0 +1,3 @@
+{{- $url := printf "https://www.nytimes.com/svc/oembed/json/?url=%s" (.Get "url") -}}
+{{- $json := getJSON $url -}}
+{{- $json.html | safeHTML -}}

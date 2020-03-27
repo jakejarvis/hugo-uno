@@ -14,6 +14,7 @@
   "devDependencies": {
     "autoprefixer": "^9.7.5",
     "hugo-extended": "0.68.3",
+    "netlify-lambda": "^1.6.3",
     "postcss-cli": "^7.1.0",
     "rimraf": "^3.0.2"
   }
